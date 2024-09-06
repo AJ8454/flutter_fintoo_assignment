@@ -2,9 +2,8 @@
 //
 //     final userNetworthLiabilitesDto = userNetworthLiabilitesDtoFromJson(jsonString);
 
-import 'dart:convert';
-
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'dart:convert';
 
 part 'user_networth_liabilites_dto.freezed.dart';
 part 'user_networth_liabilites_dto.g.dart';
@@ -16,8 +15,11 @@ String userNetworthLiabilitesDtoToJson(UserNetworthLiabilitesDto data) => json.e
 @freezed
 class UserNetworthLiabilitesDto with _$UserNetworthLiabilitesDto {
     const factory UserNetworthLiabilitesDto({
+        @JsonKey(name: "error_code")
         String? errorCode,
+        @JsonKey(name: "message")
         String? message,
+        @JsonKey(name: "data")
         Data? data,
     }) = _UserNetworthLiabilitesDto;
 
@@ -27,11 +29,17 @@ class UserNetworthLiabilitesDto with _$UserNetworthLiabilitesDto {
 @freezed
 class Data with _$Data {
     const factory Data({
+        @JsonKey(name: "networth_sum")
         double? networthSum,
-        int? liabilitySum,
+        @JsonKey(name: "liability_sum")
+        double? liabilitySum,
+        @JsonKey(name: "networth_sum_formatted")
         String? networthSumFormatted,
+        @JsonKey(name: "liability_sum_formatted")
         String? liabilitySumFormatted,
+        @JsonKey(name: "asset_data")
         double? assetData,
+        @JsonKey(name: "asset_sum_formatted")
         String? assetSumFormatted,
     }) = _Data;
 

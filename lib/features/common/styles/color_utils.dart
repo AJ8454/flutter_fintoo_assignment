@@ -7,6 +7,8 @@ class ColorUtils {
   static const sushiColor = Color(0xFF8DC63F);
   static const endeavourColor = Color(0xFF0054A6);
   static const white = Color(0xFFFFFFFF);
+  static const grey = Color(0xFFE1E1FE);
+  static const blueGreen = Color(0xFF2face2);
 
   ColorUtils._();
 }

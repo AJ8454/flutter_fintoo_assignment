@@ -9,7 +9,7 @@ part of 'user_networth_liabilites_dto.dart';
 _$UserNetworthLiabilitesDtoImpl _$$UserNetworthLiabilitesDtoImplFromJson(
         Map<String, dynamic> json) =>
     _$UserNetworthLiabilitesDtoImpl(
-      errorCode: json['errorCode'] as String?,
+      errorCode: json['error_code'] as String?,
       message: json['message'] as String?,
       data: json['data'] == null
           ? null
@@ -19,26 +19,26 @@ _$UserNetworthLiabilitesDtoImpl _$$UserNetworthLiabilitesDtoImplFromJson(
 Map<String, dynamic> _$$UserNetworthLiabilitesDtoImplToJson(
         _$UserNetworthLiabilitesDtoImpl instance) =>
     <String, dynamic>{
-      'errorCode': instance.errorCode,
+      'error_code': instance.errorCode,
       'message': instance.message,
       'data': instance.data,
     };
 
 _$DataImpl _$$DataImplFromJson(Map<String, dynamic> json) => _$DataImpl(
-      networthSum: (json['networthSum'] as num?)?.toDouble(),
-      liabilitySum: (json['liabilitySum'] as num?)?.toInt(),
-      networthSumFormatted: json['networthSumFormatted'] as String?,
-      liabilitySumFormatted: json['liabilitySumFormatted'] as String?,
-      assetData: (json['assetData'] as num?)?.toDouble(),
-      assetSumFormatted: json['assetSumFormatted'] as String?,
+      networthSum: (json['networth_sum'] as num?)?.toDouble(),
+      liabilitySum: (json['liability_sum'] as num?)?.toDouble(),
+      networthSumFormatted: json['networth_sum_formatted'] as String?,
+      liabilitySumFormatted: json['liability_sum_formatted'] as String?,
+      assetData: (json['asset_data'] as num?)?.toDouble(),
+      assetSumFormatted: json['asset_sum_formatted'] as String?,
     );
 
 Map<String, dynamic> _$$DataImplToJson(_$DataImpl instance) =>
     <String, dynamic>{
-      'networthSum': instance.networthSum,
-      'liabilitySum': instance.liabilitySum,
-      'networthSumFormatted': instance.networthSumFormatted,
-      'liabilitySumFormatted': instance.liabilitySumFormatted,
-      'assetData': instance.assetData,
-      'assetSumFormatted': instance.assetSumFormatted,
+      'networth_sum': instance.networthSum,
+      'liability_sum': instance.liabilitySum,
+      'networth_sum_formatted': instance.networthSumFormatted,
+      'liability_sum_formatted': instance.liabilitySumFormatted,
+      'asset_data': instance.assetData,
+      'asset_sum_formatted': instance.assetSumFormatted,
     };

@@ -21,8 +21,11 @@ UserNetworthLiabilitesDto _$UserNetworthLiabilitesDtoFromJson(
 
 /// @nodoc
 mixin _$UserNetworthLiabilitesDto {
+  @JsonKey(name: "error_code")
   String? get errorCode => throw _privateConstructorUsedError;
+  @JsonKey(name: "message")
   String? get message => throw _privateConstructorUsedError;
+  @JsonKey(name: "data")
   Data? get data => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -37,7 +40,10 @@ abstract class $UserNetworthLiabilitesDtoCopyWith<$Res> {
           $Res Function(UserNetworthLiabilitesDto) then) =
       _$UserNetworthLiabilitesDtoCopyWithImpl<$Res, UserNetworthLiabilitesDto>;
   @useResult
-  $Res call({String? errorCode, String? message, Data? data});
+  $Res call(
+      {@JsonKey(name: "error_code") String? errorCode,
+      @JsonKey(name: "message") String? message,
+      @JsonKey(name: "data") Data? data});
 
   $DataCopyWith<$Res>? get data;
 }
@@ -98,7 +104,10 @@ abstract class _$$UserNetworthLiabilitesDtoImplCopyWith<$Res>
       __$$UserNetworthLiabilitesDtoImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String? errorCode, String? message, Data? data});
+  $Res call(
+      {@JsonKey(name: "error_code") String? errorCode,
+      @JsonKey(name: "message") String? message,
+      @JsonKey(name: "data") Data? data});
 
   @override
   $DataCopyWith<$Res>? get data;
@@ -142,16 +151,21 @@ class __$$UserNetworthLiabilitesDtoImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$UserNetworthLiabilitesDtoImpl implements _UserNetworthLiabilitesDto {
   const _$UserNetworthLiabilitesDtoImpl(
-      {this.errorCode, this.message, this.data});
+      {@JsonKey(name: "error_code") this.errorCode,
+      @JsonKey(name: "message") this.message,
+      @JsonKey(name: "data") this.data});
 
   factory _$UserNetworthLiabilitesDtoImpl.fromJson(Map<String, dynamic> json) =>
       _$$UserNetworthLiabilitesDtoImplFromJson(json);
 
   @override
+  @JsonKey(name: "error_code")
   final String? errorCode;
   @override
+  @JsonKey(name: "message")
   final String? message;
   @override
+  @JsonKey(name: "data")
   final Data? data;
 
   @override
@@ -191,18 +205,22 @@ class _$UserNetworthLiabilitesDtoImpl implements _UserNetworthLiabilitesDto {
 
 abstract class _UserNetworthLiabilitesDto implements UserNetworthLiabilitesDto {
   const factory _UserNetworthLiabilitesDto(
-      {final String? errorCode,
-      final String? message,
-      final Data? data}) = _$UserNetworthLiabilitesDtoImpl;
+          {@JsonKey(name: "error_code") final String? errorCode,
+          @JsonKey(name: "message") final String? message,
+          @JsonKey(name: "data") final Data? data}) =
+      _$UserNetworthLiabilitesDtoImpl;
 
   factory _UserNetworthLiabilitesDto.fromJson(Map<String, dynamic> json) =
       _$UserNetworthLiabilitesDtoImpl.fromJson;
 
   @override
+  @JsonKey(name: "error_code")
   String? get errorCode;
   @override
+  @JsonKey(name: "message")
   String? get message;
   @override
+  @JsonKey(name: "data")
   Data? get data;
   @override
   @JsonKey(ignore: true)
@@ -216,11 +234,17 @@ Data _$DataFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Data {
+  @JsonKey(name: "networth_sum")
   double? get networthSum => throw _privateConstructorUsedError;
-  int? get liabilitySum => throw _privateConstructorUsedError;
+  @JsonKey(name: "liability_sum")
+  double? get liabilitySum => throw _privateConstructorUsedError;
+  @JsonKey(name: "networth_sum_formatted")
   String? get networthSumFormatted => throw _privateConstructorUsedError;
+  @JsonKey(name: "liability_sum_formatted")
   String? get liabilitySumFormatted => throw _privateConstructorUsedError;
+  @JsonKey(name: "asset_data")
   double? get assetData => throw _privateConstructorUsedError;
+  @JsonKey(name: "asset_sum_formatted")
   String? get assetSumFormatted => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -234,12 +258,12 @@ abstract class $DataCopyWith<$Res> {
       _$DataCopyWithImpl<$Res, Data>;
   @useResult
   $Res call(
-      {double? networthSum,
-      int? liabilitySum,
-      String? networthSumFormatted,
-      String? liabilitySumFormatted,
-      double? assetData,
-      String? assetSumFormatted});
+      {@JsonKey(name: "networth_sum") double? networthSum,
+      @JsonKey(name: "liability_sum") double? liabilitySum,
+      @JsonKey(name: "networth_sum_formatted") String? networthSumFormatted,
+      @JsonKey(name: "liability_sum_formatted") String? liabilitySumFormatted,
+      @JsonKey(name: "asset_data") double? assetData,
+      @JsonKey(name: "asset_sum_formatted") String? assetSumFormatted});
 }
 
 /// @nodoc
@@ -270,7 +294,7 @@ class _$DataCopyWithImpl<$Res, $Val extends Data>
       liabilitySum: freezed == liabilitySum
           ? _value.liabilitySum
           : liabilitySum // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       networthSumFormatted: freezed == networthSumFormatted
           ? _value.networthSumFormatted
           : networthSumFormatted // ignore: cast_nullable_to_non_nullable
@@ -299,12 +323,12 @@ abstract class _$$DataImplCopyWith<$Res> implements $DataCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {double? networthSum,
-      int? liabilitySum,
-      String? networthSumFormatted,
-      String? liabilitySumFormatted,
-      double? assetData,
-      String? assetSumFormatted});
+      {@JsonKey(name: "networth_sum") double? networthSum,
+      @JsonKey(name: "liability_sum") double? liabilitySum,
+      @JsonKey(name: "networth_sum_formatted") String? networthSumFormatted,
+      @JsonKey(name: "liability_sum_formatted") String? liabilitySumFormatted,
+      @JsonKey(name: "asset_data") double? assetData,
+      @JsonKey(name: "asset_sum_formatted") String? assetSumFormatted});
 }
 
 /// @nodoc
@@ -332,7 +356,7 @@ class __$$DataImplCopyWithImpl<$Res>
       liabilitySum: freezed == liabilitySum
           ? _value.liabilitySum
           : liabilitySum // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       networthSumFormatted: freezed == networthSumFormatted
           ? _value.networthSumFormatted
           : networthSumFormatted // ignore: cast_nullable_to_non_nullable
@@ -357,27 +381,33 @@ class __$$DataImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$DataImpl implements _Data {
   const _$DataImpl(
-      {this.networthSum,
-      this.liabilitySum,
-      this.networthSumFormatted,
-      this.liabilitySumFormatted,
-      this.assetData,
-      this.assetSumFormatted});
+      {@JsonKey(name: "networth_sum") this.networthSum,
+      @JsonKey(name: "liability_sum") this.liabilitySum,
+      @JsonKey(name: "networth_sum_formatted") this.networthSumFormatted,
+      @JsonKey(name: "liability_sum_formatted") this.liabilitySumFormatted,
+      @JsonKey(name: "asset_data") this.assetData,
+      @JsonKey(name: "asset_sum_formatted") this.assetSumFormatted});
 
   factory _$DataImpl.fromJson(Map<String, dynamic> json) =>
       _$$DataImplFromJson(json);
 
   @override
+  @JsonKey(name: "networth_sum")
   final double? networthSum;
   @override
-  final int? liabilitySum;
+  @JsonKey(name: "liability_sum")
+  final double? liabilitySum;
   @override
+  @JsonKey(name: "networth_sum_formatted")
   final String? networthSumFormatted;
   @override
+  @JsonKey(name: "liability_sum_formatted")
   final String? liabilitySumFormatted;
   @override
+  @JsonKey(name: "asset_data")
   final double? assetData;
   @override
+  @JsonKey(name: "asset_sum_formatted")
   final String? assetSumFormatted;
 
   @override
@@ -431,26 +461,35 @@ class _$DataImpl implements _Data {
 
 abstract class _Data implements Data {
   const factory _Data(
-      {final double? networthSum,
-      final int? liabilitySum,
+      {@JsonKey(name: "networth_sum") final double? networthSum,
+      @JsonKey(name: "liability_sum") final double? liabilitySum,
+      @JsonKey(name: "networth_sum_formatted")
       final String? networthSumFormatted,
+      @JsonKey(name: "liability_sum_formatted")
       final String? liabilitySumFormatted,
-      final double? assetData,
+      @JsonKey(name: "asset_data") final double? assetData,
+      @JsonKey(name: "asset_sum_formatted")
       final String? assetSumFormatted}) = _$DataImpl;
 
   factory _Data.fromJson(Map<String, dynamic> json) = _$DataImpl.fromJson;
 
   @override
+  @JsonKey(name: "networth_sum")
   double? get networthSum;
   @override
-  int? get liabilitySum;
+  @JsonKey(name: "liability_sum")
+  double? get liabilitySum;
   @override
+  @JsonKey(name: "networth_sum_formatted")
   String? get networthSumFormatted;
   @override
+  @JsonKey(name: "liability_sum_formatted")
   String? get liabilitySumFormatted;
   @override
+  @JsonKey(name: "asset_data")
   double? get assetData;
   @override
+  @JsonKey(name: "asset_sum_formatted")
   String? get assetSumFormatted;
   @override
   @JsonKey(ignore: true)
