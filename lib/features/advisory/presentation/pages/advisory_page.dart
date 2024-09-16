@@ -10,11 +10,13 @@ class AdvisoryPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: ColorUtils.fintooBlue,
-      child: ListView(
-        children: const [
-          AdvisoryHeaderWidget(),
-          AdvisoryBodyWidget(),
-        ],
+      child: const SingleChildScrollView(
+        child: Column(
+          children: [
+            AdvisoryHeaderWidget(),
+            AdvisoryBodyWidget(),
+          ],
+        ),
       ),
     );
   }

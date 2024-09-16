@@ -20,3 +20,19 @@ class AdvisoryDetailsProvider extends _$AdvisoryDetailsProvider {
     return result;
   }
 }
+
+@riverpod
+class PortfolioIndexNotifier extends _$PortfolioIndexNotifier {
+  @override
+  int build() => 0;
+
+  changeIndex(int value) => state = value;
+}
+
+@riverpod
+class TaskGoalIndexNotifier extends _$TaskGoalIndexNotifier {
+  @override
+  int build() => 0;
+
+  changeIndex(int value) => state = value;
+}

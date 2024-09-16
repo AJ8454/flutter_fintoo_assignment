@@ -7,6 +7,6 @@ class AppStrings {
   static const String libalities = "Libalities";
   static const String netWorth = "Net Worth";
   static const String manageViewReport = "Manage & View Report";
-
+  static const String yourScore = "Your Score";
   AppStrings._();
 }

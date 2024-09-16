@@ -5,7 +5,9 @@ import 'package:flutter_fintoo_assignment/features/common/utils/app_text.dart';
 class LabelValueWidget extends StatelessWidget {
   final String label;
   final String value;
-  const LabelValueWidget({super.key, required this.label, required this.value});
+  final Color? color;
+  const LabelValueWidget(
+      {super.key, this.color, required this.label, required this.value});
 
   @override
   Widget build(BuildContext context) {
@@ -16,11 +18,12 @@ class LabelValueWidget extends StatelessWidget {
           data: label,
           fontSize: 16,
           fontWeight: FontWeight.w800,
+          color: color,
         ),
         AppText(
           data: value,
           fontSize: 20,
-          color: ColorUtils.white,
+          color: color ?? ColorUtils.white,
           fontWeight: FontWeight.w700,
         ),
       ],
